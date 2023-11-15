@@ -1,0 +1,15 @@
+.about {
+    padding-top: 110px;
+    padding-bottom: 110px;
+
+    text-align: center;
+  
+    & .h2 {
+        margin-bottom: 50px;
+    }
+
+    & .about__text{
+        width: 600px;
+        margin: 0 auto;
+    }
+}

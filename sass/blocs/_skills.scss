@@ -1,0 +1,51 @@
+.skills{
+    padding-top: 101px;
+    padding-bottom: 101px;
+}
+
+.skills__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .h2 {
+        margin-bottom: 50px;
+    }
+
+    & .skill__line-box{
+        margin-bottom: 30px;
+
+        & .main-text{
+            margin-bottom: 10px;
+        }
+
+        & .line{
+            position: relative;
+        }
+    
+        & .line::before{
+            position: absolute;
+            display: block;
+            content: '';
+            width: 445px;
+            height: 4px;
+            background-color: #C4C4C4;
+        }
+    
+        & .line::after{
+            position: absolute;
+            display: block;
+            content: '';
+            width: 350px;
+            height: 4px;
+            background-color: $color-main;
+        }
+
+    }
+
+    & .pers__photo{
+        width: 555px;
+        height: 450px;
+    }
+}
+

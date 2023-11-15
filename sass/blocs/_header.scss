@@ -1,0 +1,60 @@
+.header{
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+
+    min-height: 700px;
+
+    background-color: $bcg;
+
+    padding: 57px 0 146px 0;
+} 
+
+.header__top-row{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 100px;
+
+    & .nav{
+        text-transform: uppercase;
+        font-size: 16px;
+    
+        & .nav__list{
+            display: flex;
+            column-gap: 42px;
+        }
+    }
+}
+
+
+
+.header__main-row{
+    display: flex;
+    justify-content: space-around;
+
+    & .main__img-box{
+        display: flex;
+        align-items: center;
+    
+    }
+    
+    & .main__text-box{
+         
+        width: 540px;
+    
+        display: flex;
+        flex-direction: column;
+        row-gap: 60px;
+        align-items: flex-start;
+    
+        & .btn{
+            @include mybutton($color-main, $bcg)
+        }
+    
+    } 
+}
+
+
