@@ -1,0 +1,46 @@
+// .works {
+
+
+// }
+
+.works__inner-box{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.works__inner-item {
+    position: relative;
+
+}
+
+// hover blur
+
+.works__inner-item:hover {
+    
+    cursor: pointer;
+
+    & .works__item-block{
+         opacity: 1;
+        }
+}
+
+.works__item-block {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(52, 84, 122, 0.8);
+    opacity: 0;
+    transition: all 0.5s;
+
+    & .works__item-hover{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+}
+
+    

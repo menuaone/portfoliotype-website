@@ -1,0 +1,13 @@
+.companies{
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+    background-color: $color-accent;
+}
+
+.companies__inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
