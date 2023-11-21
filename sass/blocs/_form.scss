@@ -1,0 +1,123 @@
+.formsec {
+    
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    text-align: center;
+
+    background-color: $bcg;
+
+    & .h2 {
+        margin-bottom: 50px;
+    }
+    & .form__text {
+        width: 600px;
+        margin: 0 auto;
+        
+        margin-bottom: 56px;
+    }
+
+}
+
+
+.form{
+
+    max-width: 540px;
+    width: 100%;
+
+    margin: 0 auto;
+
+    & .form__inner-group{ 
+       
+        display: flex;
+        justify-content: space-between; 
+
+        margin-bottom: 30px;
+    }
+
+    & .form__inner-box{
+        position: relative;
+
+    }
+
+
+    & input {
+        
+        width: 255px;
+        height: 60px;
+
+        padding: 18px 20px;
+    
+        border: 2px solid $color-main;
+        border-radius: 4px;
+        background-color: $color-accent;
+
+        outline: 0;
+
+       
+    } 
+
+    & label {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        font-size: 15px;
+        line-height: 23px;
+        color: gray;
+
+        padding: 18px 20px;
+
+        cursor: text;
+        transition: 0.2s;  
+    }
+
+
+    & textarea {
+        min-width: 540px;
+        height: 170px;
+        width: 100%;
+
+        padding: 18px 20px;
+    
+        border: 2px solid $color-main;
+        border-radius: 4px;
+        background-color: $color-accent;
+
+        resize: none;
+        outline: 0;
+    }
+
+    & input:focus~label, input:valid~label,
+    textarea:focus~label, textarea:valid~label {
+        top: -40px;
+        left: -18px;
+        font-size: 12px;
+        color: $color-main;
+
+    }
+
+
+    & textarea:focus, input:focus {
+        border: 3px solid yellowgreen;
+    }
+
+    & .form__btn {
+        @include mybutton($color-main, $bcg);
+
+        text-transform: uppercase;
+
+        margin-top: 40px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+

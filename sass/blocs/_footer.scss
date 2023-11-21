@@ -1,0 +1,37 @@
+.footer{
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    background-color: $color-main;
+}
+
+.footer__inner{
+    display: flex;
+    justify-content: space-between;
+
+
+    & .footer__leftside{
+       color: $color-accent;
+
+       & .h3{
+            font-size: 21px;
+            font-weight: 500;
+
+            margin-bottom: 20px;
+       }
+
+       & .footer__text{
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 21.328px;
+       }
+    }
+
+    & .footer__rightside{
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+}
+
