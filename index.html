@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/js/libs/youtubeLightbox.css">
     <title>CV</title>
 </head>
 <body>
@@ -27,7 +28,26 @@
                     </ul>
                 </nav>
 
+                <div class="cl-toggle-switch">
+                    <label class="cl-switch">
+                      <input type="checkbox">
+                      <span></span>
+                    </label>
+                </div>
+
+                   <!-- button block -->
+                
+                <div class="header__nav-btn">
+                    <button class="nav-icon-btn">
+                        <div class="nav-icon">
+
+                        </div>
+                    </button>
+                </div>
+
             </div>
+
+            
             <!-- header top row -->
 
             <div class="header__main-row">
@@ -159,23 +179,23 @@
                     <h2 class="h2">Мои навыки</h2>
 
                     <div class="skill__line-box">
-                        <p class="main-text">Adobe Photoshop</p>
+                        <p class="main-text">Adobe Photoshop, Figma</p>
                         <div class="line"></div>
                     </div>
 
                     <div class="skill__line-box">
-                        <p class="main-text">Adobe Photoshop</p>
+                        <p class="main-text">HTML,CSS</p>
                         <div class="line"></div>
                     </div>
                     
                     <div class="skill__line-box">
-                        <p class="main-text">Adobe Photoshop</p>
+                        <p class="main-text">JS</p>
                         <div class="line"></div>
                     </div>
                 </div>
 
                 <div class="skills__box-right">
-                    <div class="pers__photo"><img src="resources/photo.png" alt="personal" class="photo__item"></div>
+                        <img src="resources/photo.png" alt="personal" class="photo__item">
                 </div>
 
             </div>
@@ -192,8 +212,13 @@
             <p class="about__text main-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
 
  
-            <iframe class="video__item" src="https://www.youtube.com/embed/kexuG-YcQFA?si=9hf0tpu7HLtUrK1O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <!-- <div class="video-box" data-src="https://www.youtube.com/embed/kexuG-YcQFA?si=9hf0tpu7HLtUrK1O?&autoplay=1">
+            </div> -->
 
+            <a href="https://www.youtube.com/embed/kexuG-YcQFA?si=9hf0tpu7HLtUrK1O?&autoplay=1" data-youtubeLightbox class="video">
+                <img src="resources/play-button-arrowhead.png" class="video_icon">
+                <img src="resources/Снимок экрана 2023-11-21 в 22.56.47.png" class="video_img">
+            </a>
 
         </div>
     </section>
@@ -354,7 +379,7 @@
 
                 <div class="footer__leftside">
                     <h3 class="h3">Designed by designer</h3>
-                    <p class="footer__text">(с) 2018. Все права защищены.</p>
+                    <p class="footer__text">(с) 2023. Все права защищены.</p>
                 </div>
 
                 <div class="footer__rightside">
@@ -367,6 +392,18 @@
 
         </div>
     </footer>
+
+    <!-- YouTube LightBox -->
+    <div id="youtubelightbox" class="youtubelightbox">
+        <div class="youtubelightbox__centeredchild">
+            <div class="youtubelightbox__videowrapper">
+                <div id="youtubelightboxPlayer"></div>
+            </div>
+        </div>
+    </div>
     
+    <script src="/js/main.js"></script>
+    <script src="/js/libs/youtubeLightbox.js"></script>
+
 </body>
 </html>

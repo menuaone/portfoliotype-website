@@ -11,7 +11,7 @@
         margin-bottom: 50px;
     }
     & .form__text {
-        width: 600px;
+        max-width: 600px;
         margin: 0 auto;
         
         margin-bottom: 56px;
@@ -33,6 +33,11 @@
         justify-content: space-between; 
 
         margin-bottom: 30px;
+
+        @include mediaXSTablet {
+            flex-direction: column;
+            row-gap: 30px;
+        }
     }
 
     & .form__inner-box{
@@ -54,6 +59,9 @@
 
         outline: 0;
 
+        @include mediaXSTablet {
+            width: 100%;
+        }
        
     } 
 
@@ -74,7 +82,7 @@
 
 
     & textarea {
-        min-width: 540px;
+        max-width: 540px;
         height: 170px;
         width: 100%;
 

@@ -9,6 +9,18 @@
 .project__inner{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include mediaSTablet{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        row-gap: 20px;
+
+        justify-items: center;
+        align-items: center;
+
+    }
 }
 
 .icon__item--inner{

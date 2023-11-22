@@ -7,22 +7,44 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+
+    @include mediaSTablet{
+        flex-direction: column;
+    }
+
+}
+
+
+.skills__box-left{
+
+    @include mediaSTablet{
+        width: 100%;
+    }
+    
 
     & .h2 {
         margin-bottom: 50px;
+
+        @include mediaSTablet{
+            text-align: center;
+        }
     }
 
     & .skill__line-box{
         margin-bottom: 30px;
 
+
         & .main-text{
             margin-bottom: 10px;
+            text-align: center;
         }
 
         & .line{
             position: relative;
+
         }
-    
+   
         & .line::before{
             position: absolute;
             display: block;
@@ -30,6 +52,12 @@
             width: 445px;
             height: 4px;
             background-color: #C4C4C4;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include mediaPhoneMax {
+                width: 200px;
+            }
         }
     
         & .line::after{
@@ -39,13 +67,29 @@
             width: 350px;
             height: 4px;
             background-color: $color-main;
+            left: 50%;
+            transform: translateX(-70%);
+
+            @include mediaPhoneMax {
+                width: 150px;
+            }
         }
 
     }
+}
 
-    & .pers__photo{
-        width: 555px;
-        height: 450px;
+.skills__box-right {
+   
+    margin-top: 20px;
+    
+    max-width: 555px;
+    max-height: 450px;
+
+    @include mediaTablet {
+        max-width: 400px;
+        max-height: 305px;
     }
+
+
 }
 

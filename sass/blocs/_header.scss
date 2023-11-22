@@ -1,60 +1,294 @@
-.header{
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
+.header {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
 
-    min-height: 700px;
+  min-height: 700px;
 
-    background-color: $bcg;
+  background-color: $bcg;
 
-    padding: 57px 0 146px 0;
-} 
+  padding: 57px 0 146px 0;
 
-.header__top-row{
+   @include mediaPhoneMax{
+      padding: 30px 0 120px 0;
+    }
+}
 
+.header__top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+
+  margin-bottom: 100px;
+
+  @include mediaPhoneMax{
+    margin-bottom: 6cap;
+  }
+  
+
+  // навигация уходит при данном медиа запросе
+  & .nav {
+    text-transform: uppercase;
+    font-size: 16px;
+
+    @include mediaSTablet{
+      display: none;
+  }
+
+    & .nav__list {
+      display: flex;
+      column-gap: 42px;
+    }
+  }
+}
+
+.header__main-row {
+  display: flex;
+  justify-content: space-around;
+   
+
+   @include mediaXSTablet {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    }
+
+  & .main__img-box {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
-    margin-bottom: 100px;
-
-    & .nav{
-        text-transform: uppercase;
-        font-size: 16px;
-    
-        & .nav__list{
-            display: flex;
-            column-gap: 42px;
-        }
+    & img {
+      @include mediaTablet {
+        width: 300px;
+        height: 205px;
+      }
+      
+      @include mediaPhoneMax {
+        width: 200px;
+        height: 125px;
+      }
     }
-}
+  }
 
+  & .main__text-box {
+    width: 540px;
 
-
-.header__main-row{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    row-gap: 60px;
+    align-items: flex-start;
 
-    & .main__img-box{
-        display: flex;
-        align-items: center;
-    
+    & .btn {
+      @include mybutton($color-main, $bcg);
     }
-    
-    & .main__text-box{
-         
-        width: 540px;
-    
-        display: flex;
-        flex-direction: column;
-        row-gap: 60px;
-        align-items: flex-start;
-    
-        & .btn{
-            @include mybutton($color-main, $bcg)
-        }
-    
-    } 
+
+    @include mediaSTablet {
+      width: 300px;
+      row-gap: 20px;
+    }
+
+    @include mediaXSTablet {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
 }
 
+// появление кнопки при данном медиазапросе
+.header__nav-btn{
+  display: none;
 
+  @include mediaSTablet{
+      display: block;
+  }
+  
+}
+
+// мобильное меню
+
+.header__top-row--mobile{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: lightgrey;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 60px;
+
+  padding-top: 80px;
+  padding-bottom: 40px;
+
+  z-index: 9;
+
+
+  // отображение кнопок
+
+  .logo--box{
+    position: absolute;
+    top: 57px;
+    left: 30px;
+
+    @include mediaPhoneMax {
+      // left: 10px;
+      position: static;
+    }
+  }
+
+  .nav{
+      display: block;
+  } 
+
+
+  .nav__list {
+      flex-direction: column;
+      align-items: center;
+
+      row-gap: 20px;
+  }
+
+  // отображение кнопки смены фона
+  .cl-toggle-switch{
+      display: block;
+  }
+
+  // перемещение кнопки в верхний угол
+  .header__nav-btn{
+      position: fixed;
+      top: 63px;
+      right: 30px;
+
+        @include mediaPhoneMax{
+          top: 60px;
+          right: 10px;
+        }
+
+  } 
+  
+
+  
+}
+
+// toggle switch button
+.cl-toggle-switch {
+  position: relative;
+
+    @include mediaSTablet{
+      display: none;
+    }
+}
+
+.cl-switch {
+  position: relative;
+  display: inline-block;
+}
+
+/* Input */
+.cl-switch > input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  z-index: -1;
+  position: absolute;
+  right: 6px;
+  top: -8px;
+  display: block;
+  margin: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(0, 0, 0, 0.38);
+  outline: none;
+  opacity: 0;
+  transform: scale(1);
+  pointer-events: none;
+  transition: opacity 0.3s 0.1s, transform 0.2s 0.1s;
+}
+/* Track */
+.cl-switch > span::before {
+  content: "";
+  display: inline-block;
+  margin: 5px 0 5px 10px;
+  border-radius: 7px;
+  width: 36px;
+  height: 14px;
+  background-color: rgb(0, 0, 0, 0.38);
+  vertical-align: top;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+/* Thumb */
+.cl-switch > span::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 16px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  transition: background-color 0.2s, transform 0.2s;
+}
+/* Checked */
+.cl-switch > input:checked {
+  right: -10px;
+  background-color: #8daed6;
+}
+
+.cl-switch > input:checked + span::before {
+  background-color: #8daed6;;
+}
+
+.cl-switch > input:checked + span::after {
+  background-color: $color-main;
+  transform: translateX(16px);
+}
+/* Hover, Focus */
+.cl-switch:hover > input {
+  opacity: 0.04;
+}
+
+.cl-switch > input:focus {
+  opacity: 0.12;
+}
+
+.cl-switch:hover > input:focus {
+  opacity: 0.16;
+}
+/* Active */
+.cl-switch > input:active {
+  opacity: 1;
+  transform: scale(0);
+  transition: transform 0s, opacity 0s;
+}
+
+.cl-switch > input:active + span::before {
+  background-color: #5f82ad;
+}
+
+.cl-switch > input:checked:active + span::before {
+  background-color: #5f82ad;
+}
+/* Disabled */
+.cl-switch > input:disabled {
+  opacity: 0;
+}
+
+.cl-switch > input:disabled + span::before {
+  background-color: #ddd;
+}
+
+.cl-switch > input:checked:disabled + span::before {
+  background-color: #bfdbda;
+}
+
+.cl-switch > input:checked:disabled + span::after {
+  background-color: #61b5b4;
+}

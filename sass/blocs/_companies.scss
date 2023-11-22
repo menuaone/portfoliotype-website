@@ -10,4 +10,15 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include mediaTablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+
+        justify-items: center; 
+        align-items: center; 
+    }
 }
