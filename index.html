@@ -69,6 +69,8 @@
         </div>
     </header>
 
+    <!-- end header -->
+
     <section class="about">
         <div class="container">
 
@@ -78,7 +80,7 @@
 
     </section>
 
-    <!-- about -->
+    <!-- end about -->
 
     <section class="projects">
         <div class="container">
@@ -168,7 +170,7 @@
         </div>
     </section>
 
-    <!-- projects -->
+    <!-- end projects -->
 
     <section class="skills">
         <div class="container">
@@ -203,7 +205,7 @@
         </div>
     </section>
 
-    <!-- skills -->
+    <!-- end skills -->
 
     <section class="howiwork">
         <div class="container">
@@ -223,7 +225,7 @@
         </div>
     </section>
 
-    <!-- howiwork -->
+    <!-- end howiwork -->
 
     <section class="works">
 
@@ -340,9 +342,9 @@
            
             <h2 class="h2">Хотите веб-сайт?</h2>
             <p class="form__text main-text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
-            
-            
-            <form class="form" action="">
+  
+
+            <form class="form" >
 
                 <div class="form__inner-group">
 
@@ -363,7 +365,8 @@
                     <label for="text">Сообщение</label>
                 </div>
 
-                <button type="submit" class="form__btn"> Отправить</button>
+                <!-- onclick="sendEmail()" -->
+                <button type="button" id="btn" class="form__btn" > Отправить</button>
 
             </form>
         </div> 
@@ -402,8 +405,11 @@
         </div>
     </div>
     
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/libs/youtubeLightbox.js"></script>
+   
+ 
 
 </body>
 </html>
