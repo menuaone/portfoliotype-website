@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* reset main */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@300;400;500&display=swap");
 * {
@@ -95,6 +96,11 @@ body {
   margin: 0;
   background-color: #fff;
   font-family: "Roboto", sans-serif;
+}
+
+/* Стили Тёмной темы */
+body.dark-theme {
+  background-color: lightblue;
 }
 
 .container {

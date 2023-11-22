@@ -9,6 +9,12 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+  /* Стили Тёмной темы */
+  body.dark-theme {
+    background-color: lightblue;
+  }
+
+
 .container {
     width: 100%;
     max-width: 1920px;

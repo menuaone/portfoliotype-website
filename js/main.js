@@ -39,3 +39,13 @@ function sendEmail() {
 const submitBtn = document.getElementById("btn");
 
 submitBtn.addEventListener('click', sendEmail)
+
+// смена цвета фона
+
+const colorBtn = document.getElementById("changeColor")
+
+colorBtn.addEventListener('click', function(){
+    // const body = document.querySelector('body');
+    document.body.classList.toggle('dark-theme'); 
+
+})
