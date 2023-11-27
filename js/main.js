@@ -46,6 +46,5 @@ const colorBtn = document.getElementById("changeColor")
 
 colorBtn.addEventListener('click', function(){
     // const body = document.querySelector('body');
-    document.body.classList.toggle('dark-theme'); 
-
+    document.body.classList.toggle("dark-theme"); 
 })

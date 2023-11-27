@@ -100,7 +100,7 @@ body {
 
 /* Стили Тёмной темы */
 body.dark-theme {
-  background-color: lightblue;
+  background-color: lightcoral;
 }
 
 .container {
